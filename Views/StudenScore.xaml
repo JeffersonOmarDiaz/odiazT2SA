@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="odiazT2SA.Views.StudenScore"
+             Title="StudenScore">
+    <VerticalStackLayout>
+        <Label 
+            Text="SISTEMA DE CALIFICACIONES!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Picker x:Name="pickerList"
+                Title="Seleccione un estudiante">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Omar Díaz</x:String>
+                    <x:String>Juan Fonseca</x:String>
+                    <x:String>Maria Angula</x:String>
+                    <x:String>Edison Osorio</x:String>
+                    <x:String>Martha Meneses</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label 
+            Text="PARCIAL 1!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Nota seguimiento 1"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"></Label>
+            <Entry x:Name="txtNotaSeg1"
+                   Placeholder="Ingrese la nota del seguimiento 1"
+                   TextChanged="scoreValues_TextChanged"
+                   Keyboard="Numeric"
+                   Grid.Row="0"
+                    Grid.Column="1"></Entry>
+            
+            <Label Text="Examen 1"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1"
+                   Grid.Column="0"></Label>
+            <Entry x:Name="txtNotaExamen1"
+                   Placeholder="Ingrese la nota del examen 1"
+                   TextChanged="scoreValues_TextChanged"
+                   Keyboard="Numeric"
+                   Grid.Row="1"
+                    Grid.Column="1"></Entry>
+            
+            <Label Text="Nota Parcial"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2"
+                   Grid.Column="0"></Label>
+            <Label x:Name="txtNotaP1"
+                   Text="Nota Parcial 1"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2"
+                   Grid.Column="1"></Label>
+            
+            
+        </Grid>
+        <Label 
+            Text="PARCIAL 2!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nota seguimiento 1"
+           FontSize="16"
+           HorizontalTextAlignment="Center"
+           Grid.Row="0"
+           Grid.Column="0"></Label>
+            <Entry x:Name="txtNotaSeg2"
+           Placeholder="Ingrese la nota del seguimiento 2"
+           TextChanged="scoreValues_TextChanged"
+           Keyboard="Numeric"
+           Grid.Row="0"
+            Grid.Column="1"></Entry>
+
+            <Label Text="Examen 2"
+           FontSize="16"
+           HorizontalTextAlignment="Center"
+           Grid.Row="1"
+           Grid.Column="0"></Label>
+            <Entry x:Name="txtNotaExamen2"
+           Placeholder="Ingrese la nota del examen 2"
+           TextChanged="scoreValues_TextChanged"
+           Keyboard="Numeric"
+           Grid.Row="1"
+            Grid.Column="1"></Entry>
+
+            <Label Text="Nota Parcial"
+           FontSize="16"
+           HorizontalTextAlignment="Center"
+           Grid.Row="2"
+           Grid.Column="0"></Label>
+            <Label x:Name="txtNotaP2"
+           Text="Nota Parcial 1"
+           FontSize="16"
+           HorizontalTextAlignment="Center"
+           Grid.Row="2"
+           Grid.Column="1"></Label>
+
+        <Label
+            Text="Nota final"
+            FontSize="16"
+            HorizontalTextAlignment="Center"
+            Grid.Row="3"
+            Grid.Column="0"></Label>
+        <Label x:Name="txtNotaTotal"
+            Text="Nota total"
+            FontSize="16"
+            HorizontalTextAlignment="Center"
+            Grid.Row="3"
+            Grid.Column="1"></Label>
+        <Label
+            Text="Estado"
+            FontSize="16"
+            HorizontalTextAlignment="Center"
+            Grid.Row="4"
+            Grid.Column="0"></Label>
+        <Label x:Name="txtEstadoAprobacion"
+            Text="Estado"
+            FontSize="16"
+            HorizontalTextAlignment="Center"
+            Grid.Row="4"
+            Grid.Column="1"></Label>
+
+        <Label 
+            Text="Fecha"
+            FontSize="16"
+            TextColor="Blue"
+            HorizontalTextAlignment="Center"
+            Grid.Row="5"
+            Grid.Column="0"></Label>
+            <DatePicker x:Name="dFechas" 
+                    Date="01/01/2024" Format="MM/dd/yyyy"
+                    Grid.Row="5"
+                    Grid.Column="1"/>
+        </Grid>
+        <Button x:Name="btnCalificar"
+                        Text="Calificar"
+                        Clicked="btnCalificar_Clicked"
+                        Grid.Row="3"
+                        Grid.Column="1"></Button>
+    </VerticalStackLayout>
+</ContentPage>
