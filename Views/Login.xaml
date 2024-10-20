@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="odiazT2SA.Views.Login"
+             Title="Login">
+    <VerticalStackLayout
+        Spacing="25" 
+        Padding="25">
+        <Label 
+            Text="Inicio de sesión!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image Source="https://revista.uisrael.edu.ec/images/uisrael.png"
+               WidthRequest="250"></Image>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1"
+                   Grid.Column="0"></Label>
+            <Entry x:Name="txtName" 
+                   Placeholder="Ingrese el nombre"
+                   Grid.Row="1"
+                   Grid.Column="1"></Entry>
+            
+            <Label Text="Clave"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2"
+                   Grid.Column="0"></Label>
+            <Entry x:Name="txtClave" 
+                   Placeholder="Ingrese la clave"
+                   IsPassword="True"
+                   Grid.Row="2"
+                   Grid.Column="1"></Entry>
+        </Grid>
+        <Button Text="Iniciar sesión" Clicked="Button_Clicked"></Button>
+    </VerticalStackLayout>
+</ContentPage>
